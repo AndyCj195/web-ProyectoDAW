@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Informe de Recolección por Comunidad">
+    <meta name="keywords" content="comunidad,reciclaje,grupo,UG">
+    <meta name="author" content="Jorge Alexis Suárez Valarezo">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Informe de Recolección por Comunidad</title>
+    <style>
+        .grid-contenedor {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .localizacion {
+            display: grid;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .localizacion h2 {
+            color: #2e7d32;
+
+        }
+
+                .foto-container {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+
+        }
+                .foto img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+
+        .progreso-barra {
+            background-color: #c8e6c9;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .progreso {
+            background-color: #4caf50;
+            height: 20px;
+            border-radius: 30px;
+        }
+
+        @media (max-width:700px){
+            .grid-contenedor{
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div>
+            <img class="div_logo_header" src="https://pbs.twimg.com/media/GbtRafJW4BEozsZ?format=png&name=small" alt="logo">
+        </div>
+        
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quienesSomos.html">Funny Recycle</a></li>
+                <li><a href="recoleccion.html">Puntos de Recolección</a></li>
+                <li><a href="informeRecoleccion.html">Informe de Recolección</a></li>
+                <li><a href="separacion.html">Registro de Residuos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<div class="grid-contenedor">
+
+    <section class="localizacion">
+        <h2>Recolección en Norte</h2>
+        <p>Voluntarios: 35 personas</p>
+        <p>Materiales recolectados: Papel, Cartón.</p>
+        <p>(Se ubican en el contenedor azul) </p>
+
+        <div class="foto-container">
+            <div class="foto">
+                <img src="https://media.istockphoto.com/vectors/paper-trash-in-cardboard-box-vector-id491446726?k=6&m=491446726&s=170667a&w=0&h=UvOpT-o6ixTvTWe6ehUV7if50KsY-YG5XwgewDjfHng=" alt="Recolección Norte">
+            </div>
+            <div class="foto">
+                <img src="https://www.reyplast.pe/imagenes/contenedor-urbano--80-papel-y-carton-azul.jpg" alt="Recolección Norte">
+            </div>
+        </div>
+        
+        <h3>Progreso</h3>
+        <div class="progreso-barra">
+            <div class="progreso" style="width: 70%;"></div>
+        </div>
+    </section>
+
+    <section class="localizacion">
+        <h2>Recolección en Sur</h2>
+        <p>Voluntarios: 50 personas</p>
+        <p>Materiales recolectados: Plástico, botellas y envolturas.</p>
+        <p>(Se ubican en el contenedor amarillo) </p>
+        <div class="foto-container">
+            <div class="foto">
+                <img src="https://th.bing.com/th/id/R.217082abcc9f18c31ecb4167646f52bd?rik=O3oK13cCpqppng&pid=ImgRaw&r=0" alt="Recolección Sur">
+            </div>
+            <div class="foto">
+                <img src="https://th.bing.com/th/id/R.acebd5cb9f27953c0eb0a97fdcd2a7ef?rik=0OaqVnWGc0zxUw&riu=http%3a%2f%2f4.bp.blogspot.com%2f-7Hf9v6FFn7o%2fVkieO_vME8I%2fAAAAAAAAAEM%2fKKhYatarqEY%2fs1600%2famarillo120_full.png&ehk=I7wlwWbucEFP3BwTdyGDQQ2pnubsQbjV9x%2bQPKRUcZQ%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1" alt="Recolección Sur">
+            </div>
+        </div>
+        <h3>Progreso</h3>
+        <div class="progreso-barra">
+            <div class="progreso" style="width: 40%;"></div>
+        </div>
+    </section>
+
+    <section class="localizacion">
+        <h2>Recolección en Este</h2>
+        <p>Voluntarios: 40 personas</p>
+        <p>Materiales recolectados: Vidrio.</p>
+        <p>(Se ubican en el contenedor verde) </p>
+        <div class="foto-container">
+            <div class="foto">
+                <img src="https://img.freepik.com/vector-premium/recogida-residuos-vidrio-sobre-fondo-blanco-botellas-vasos-jarrones-otra-basura-productos-vidrio-ilustracion-vector-basura-vidrio-reciclable_281155-388.jpg?w=2000" alt="Recolección Este">
+            </div>
+            <div class="foto">
+                <img src="https://th.bing.com/th/id/OIP.Qk7UCjYhPSq3aD3qfC01uAAAAA?rs=1&pid=ImgDetMain" alt="Recolección Este">
+            </div>
+        </div>
+        <h3>Progreso</h3>
+        <div class="progreso-barra">
+            <div class="progreso" style="width: 60%;"></div>
+        </div>
+    </section>
+
+    <section class="localizacion">
+        <h2>Recolección en Oeste</h2>
+        <p>Voluntarios: 25 personas</p>
+        <p>Materiales recolectados: Restos de frutas, alimentos en mal estado. </p>
+        <p>(Se ubican en el contenedor naranja) </p>
+        <div class="foto-container">
+            <div class="foto">
+                <img src="https://static.vecteezy.com/system/resources/previews/005/745/574/original/food-misuse-rgb-color-icon-excessive-nutrition-and-addictive-overeating-poverty-and-hunger-issue-food-imbalance-in-world-isolated-illustration-simple-filled-line-drawing-vector.jpg" alt="Recolección Oeste">
+            </div>
+            <div class="foto">
+                <img src="https://th.bing.com/th/id/OIP.HZBncNBSnz7f1u173cMeyAHaIW?rs=1&pid=ImgDetMain" alt="Recolección Oeste">
+            </div>
+        </div>
+        <h3>Progreso</h3>
+        <div class="progreso-barra">
+            <div class="progreso" style="width: 20%;"></div>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <div class="div_footer_header">
+        <div class="div_logo_footer">
+            <img width="70" height="70" src="https://pbs.twimg.com/media/GbtRafJW4BEozsZ?format=png&name=small" alt="logo">
+            <p>Funny Recycle</p>
+        </div>
+        <div class="div_redes">
+            <img src="https://pbs.twimg.com/media/Gb0TPeuWIAU84Qb?format=png&name=small" alt="Facebook-logo">
+            <img src="https://pbs.twimg.com/media/Gb0TPbIXIAEadwv?format=png&name=small" alt="Instagram-logo">
+            <img src="https://pbs.twimg.com/media/Gb0TPewXQAg0Mr3?format=png&name=small" alt="x-Twitter-logo">
+        </div>
+    </div>
+    <hr>
+    <div class="div_footer_main">
+        <div>
+            <p>Jorge Alexis Suárez Valarezo - Plataforma de Reciclaje Domiciliario</p>
+        </div>
+        <div class="div_derechos">
+            <p>2024 © Todos los derechos reservados</p>
+            <p>Privacy Policy | Terms and conditions</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
