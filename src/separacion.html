@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Separacion de reciclaje">
+    <meta name="keywords" content="comunidad,reciclaje,grupo,UG">
+    <meta name="autor" content="Arroba Carrillo Omar Andrés">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Separacion de reciclaje</title>
+    <style>
+        #principal{
+            width: 90%;
+            margin: auto;
+        }
+
+        /*Títulos*/
+        .valor p,h2,h4{
+            text-align: center;
+        }
+        h4{
+            font-size: 20px;
+            background-color: #85c557;
+            margin: 0;
+            padding: 5px;
+        }
+        h2{
+            font-size: 30px;
+        }
+
+        .linea{
+            background-color: #7eb983;
+            width: 88%;
+            height: 3px;
+            margin: 20px auto;
+        }
+
+
+        /*relacionado a la seccion inicial - inicio*/
+        #seccion-inicio{
+            width: 80%;
+            margin: auto;
+            padding-bottom: 10px;
+            min-height: 200px;
+        }
+
+        #seccion-inicio img{
+            max-width: 70%; 
+            max-height: 50%; 
+        } 
+
+        #seccion-inicio p{
+            border: 3px solid #6d9f71;
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 90%; 
+            margin: auto;
+            font-family: Arial, sans-serif; 
+        }
+
+        #img-inicio{
+            text-align: center;
+        }
+
+        .obj img{
+            max-width: 100%;
+            height: 230px;         
+        }
+
+        .obj hr{
+            margin: 2px;
+            height: 2px;
+            background-color: black;
+        }
+
+        .obj{
+            border-radius: 10px;
+            padding: 5px;
+            /*max-width: auto;*/
+            margin-left: 5px;
+            margin-top: 5px;
+            background-color: #E8F5E9;    
+        }
+
+        #separacion-obj{
+            display: grid;
+            place-items: center; /*Centrar bordes con imagenes*/
+            grid-template-rows: auto auto auto; /*Altura filas*/
+            grid-template-columns: 10% 38% 38% 10%; /*Ancho columnas*/
+            grid-gap: 40px 30px; /*Distancia row-column*/
+            margin-bottom: 20px;
+        }
+
+        .obj:nth-child(1){
+            grid-row: 1;
+            grid-column: 2;
+
+        }
+        .obj:nth-child(2){
+            grid-row: 1;
+            grid-column: 3;
+        }
+        .obj:nth-child(3){
+            grid-row: 2;
+            grid-column: 3;
+        }
+        .obj:nth-child(4){
+            grid-row: 2;
+            grid-column: 2;
+        }
+        .obj:nth-child(5){
+            grid-row: 3;
+            grid-column: 2;
+        }
+        .obj:nth-child(6){
+            grid-row: 3;
+            grid-column: 3;
+        }
+
+         /*relaciuonado a la seccion dos - procesos*/
+         #separacion{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 10px 60px;
+            min-height: 200px;
+            max-width: 100%;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        .separa-proc{
+            width: 23%;
+            padding: 10px;
+            margin: 5px; /*para que no se salga del contenedor*/
+            border: 1px solid;
+            box-sizing: border-box;
+        }
+
+        .separa-proc p{
+            border: 3px solid #6d9f71;
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 90%; 
+            margin: auto;
+            font-family: Arial, sans-serif; 
+        }
+
+
+
+
+        /*realacionado a la seccion-third*/
+
+        
+        #resultado-prod{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .prod-recicl{
+            padding: 10px;
+            width: 30%;
+            margin-top: 15px;
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .prod-recicl img {
+            width: 100%; 
+            height: 360px; 
+            object-fit: cover; 
+        }
+
+        .prod-recicl figcaption{
+            background-color: #E8F5E9;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .prod-recicl:nth-child(3) {
+            width: 50%;
+            grid-column: span 2;
+            justify-self: center;
+        }
+
+        @media (max-width: 575px){
+            /*Seccion dos*/
+            #separacion{
+                display: grid;
+                grid-template-columns: 1fr;
+                justify-items: center;
+            }
+
+            .separa-proc{
+                width: 80%;
+                padding: 10px;
+                margin: 5px; /*para que no se salga del contenedor*/
+                border: 1px solid;
+                box-sizing: border-box;
+            }
+            /*Seccion tres*/
+            #resultado-prod{
+                display: grid;
+                grid-template-columns: 1fr;
+                justify-items: center;
+            }
+            .prod-recicl{
+                border: #6d9f71;
+            }
+            .prod-recicl:nth-child(1){
+                width: 90%;
+            } 
+            .prod-recicl:nth-child(2){
+                width: 90%;
+            }
+            .prod-recicl:nth-child(3){
+                width: 90%;
+                grid-column: span 1;
+                justify-self: center;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div id="id_container">
+        <header>
+            <div>
+                <img class="div_logo_header" src="https://pbs.twimg.com/media/GbtRafJW4BEozsZ?format=png&name=small" alt="logo">
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="quienesSomos.html">Funny Recycle</a></li>
+                    <li><a href="recoleccion.html">Puntos de Recolección</a></li>
+                    <li><a href="informeRecoleccion.html">Informe de Recolección</a></li>
+                    <li><a href="separacion.html">Servicios</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div style="width: 90%; margin: 25px auto; display: grid; ">
+                <hr>
+                <h2>Separación de reciclaje de la comunidad</h2>
+                <hr>
+            </div>
+            <div id="principal">
+                <div id="seccion-inicio">
+                    <div id="img-inicio"><img src="https://www.leonardo-gr.com/wp-content/uploads/2022/05/residuo.jpg" alt="Reciclaje"></div>
+                    <p>
+                        Reciclar es crucial para reducir la cantidad de desechos que terminan en vertederos y disminuir el impacto ambiental. 
+                        Al reciclar, ahorramos energía, conservamos recursos naturales y reducimos la contaminación del aire y el agua. 
+                        Además, fomenta una economía circular, donde los materiales se reutilizan en lugar de ser desechados, 
+                        promoviendo un futuro más sostenible.
+                    </p>
+                </div>
+                <div class="linea"></div>
+                <section id="seccion-one">
+                    <div id="separacion-obj">
+                        <div class="obj">
+                            <img src="https://img.freepik.com/vector-premium/recogida-residuos-plasticos-blanco_165488-2964.jpg" alt="Plásticos">
+                        </div>
+        
+                        <div class="obj">
+                            <h4>Plásticos</h4>
+                            <hr>
+                            <ul>
+                                <li>500 m² de área de procesamiento</li>
+                                <li>Capacidad de producción diaria: 50.000 kg</li>
+                                <li>Recolección y clasificación de plásticos PET, HDPE, LDPE, entre otros, postconsumo y postindustrial</li>
+                                <li>Gestión integral del plástico:
+                                <br>Elaboración de pellets de plástico reciclado para su reutilización en la fabricación de nuevos productos como botellas, envases, textiles, y más.<br></li>
+                            </ul>
+                        </div>
+        
+        
+                        <div class="obj">
+                            <img src="https://img.freepik.com/vector-premium/recogida-residuos-papel-dibujos-animados_52683-75223.jpg" alt="Papeles y cartón">
+                        </div>
+        
+                        <div class="obj">
+                            <h4>Papeles y cartón</h4>
+                            <hr>
+                            <ul>
+                                <li>450 m² de área de procesamiento</li>
+                                <li>Capacidad de producción diaria: 35.000 kg</li>
+                                <li>Recolección y clasificación de papeles y cartones usados postconsumo y postindustrial</li>
+                                <li>Gestión integral del papel y cartón:
+                                <br>Elaboración de pacas de papel y cartón compactado para su reciclaje y reutilización en la fabricación de nuevos productos, como cajas, cuadernos, y materiales de embalaje.<br></li>
+                            </ul>
+                        </div>
+        
+        
+                        <div class="obj">
+                            <img src="https://www.onlinemetals.com/medias/homepageH1-hero-mobile-min.jpg?context=bWFzdGVyfGltYWdlc3wyMjUyNnxpbWFnZS9qcGVnfGg2Yy9oYTAvOTU1NjAxODcyNDg5NC9ob21lcGFnZUgxLWhlcm8tbW9iaWxlLW1pbi5qcGd8NjZiMjViZjNhOTJjMWMxMzQyMWZkZWE5MDMzOGI3OWRkYjNjMTRlMWMzNmVlNTIyM2U0OGUwNTdkMjY3NDJjYg" alt="Metales">
+                        </div>
+        
+                        <div class="obj">
+                            <h4>Metales</h4>
+                            <hr>
+                            <ul>
+                                <li>600 m² de área de procesamiento</li>
+                                <li>Capacidad de producción diaria: 30.000 kg</li>
+                                <li>Recolección y clasificación de metales ferrosos y no ferrosos postconsumo y postindustrial</li>
+                                <li>Gestión integral de metal</li>
+                                <li>Gestión integral de metales:<br>Proceso de compactación y fundición de metales para su reutilización en la fabricación de nuevos productos, como componentes industriales, estructuras metálicas y piezas automotrices.<br></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <div class="linea"></div>
+                <section id="seccion-second">
+                    <div style="width: 90%; margin: 25px auto; display: grid;" >
+                        <hr>
+                        <h2>Métodos de separación de materiales de reciclaje</h2>
+                        <hr>
+                    </div>
+                    <div id="separacion">
+                        <div class="separa-proc">
+                            <h4>Recolección selectiva</h4>
+                            <p>
+                                En este proceso, los materiales reciclables se 
+                                recolectan de manera separada en función de su tipo (papel, cartón, plástico, vidrio, metal, etc.). 
+                                Esta fase es clave para mantener la pureza de los materiales.
+                            </p>
+                        </div>
+            
+                        <div class="separa-proc">
+                            <h4>Métodos manuales de separación</h4>
+                            <p>
+                                En algunas instalaciones de reciclaje, la separación se realiza de forma manual. 
+                                Trabajadores capacitados clasifican los materiales por tipo, asegurándose de eliminar contaminantes y 
+                                garantizar la calidad de los materiales reciclados.
+                            </p>
+                        </div>
+            
+                        <div class="separa-proc">
+                            <h4>Tecnologías avanzadas de clasificación</h4>
+                            <p>
+                                El avance tecnológico ha llevado a la implementación de sistemas automatizados de clasificación. Estos
+                                utilizan sensores y máquinas para identificar y separar rápidamente los diferentes tipos de materiales,
+                                mejorando la eficiencia y reduciendo los errores humanos.
+                            </p>
+                        </div>
+            
+                        <div class="separa-proc">
+                            <h4>Separación magnética</h4>
+                            <p>
+                                Para materiales como el metal, se utiliza la separación magnética. Los imanes separan eficazmente los 
+                                componentes ferrosos y no ferrosos, facilitando su procesamiento posterior.
+                            </p>
+                        </div>
+            
+                        <div class="separa-proc">
+                            <h4>Flotación para plásticos</h4>
+                            <p>
+                                En el caso de los plásticos, la flotación es un método común. Al sumergir los materiales en agua, los
+                                plásticos flotan mientras que otros materiales más densos se hunden, permitiendo su separación 
+                                efectiva.
+                            </p>
+                        </div>
+                    </div>          
+                </section>
+                <div class="linea"></div>
+                <section id="seccion-third">
+                    <div style="width: 90%; margin: 25px auto; display: grid; ">
+                        <hr>
+                        <h2>Objetos hechos a partir de materiales reciclados</h2>
+                        <hr>
+                    </div>
+                    <div id="resultado-prod">
+                        <figure class="prod-recicl">
+                            <img id="escultura" src="https://images1.novica.net/pictures/7/p287591_1.jpg" alt="Objeto con metal reciclado"> 
+                            <figcaption>Una escultura hecha con metales reciclados.</figcaption>
+                        </figure>
+                        <figure class="prod-recicl">
+                            <img id="cesta" src="https://images.squarespace-cdn.com/content/v1/615074e5a17d5e362b1fed57/1640641940755-PTGNTOE4TVSWGO0HQRRD/19.jpg" alt="Objeto con plástico reciclado">
+                            <figcaption>Cesta hecha de plásticos reciclados.</figcaption>
+                        </figure>
+                        <figure class="prod-recicl">
+                            <img id="papel-recicslado" src="https://s3.amazonaws.com/prod-wp-tunota/wp-content/uploads/2023/01/reciclar-1-1024x768.jpg" alt="Objeto con papel-cartón reciclado">
+                            <figcaption>Papel hecho con papeles y cartón reciclado.</figcaption>
+                        </figure>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <div class="div_footer_header">
+                <div class="div_logo_footer">
+                    <img width="70" height="70" src="https://pbs.twimg.com/media/GbtRafJW4BEozsZ?format=png&name=small" alt="logo">
+                    <p>Funny Recycle</p>
+                </div>
+                <div class="div_redes">
+                    <img src="https://pbs.twimg.com/media/Gb0TPeuWIAU84Qb?format=png&name=small" alt="Facebook-logo">
+                    <img src="https://pbs.twimg.com/media/Gb0TPbIXIAEadwv?format=png&name=small" alt="Instagram-logo">
+                    <img src="https://pbs.twimg.com/media/Gb0TPewXQAg0Mr3?format=png&name=small" alt="x-Twitter-logo">
+
+                </div>
+            </div>
+            <hr>
+            <div class="div_footer_main">
+                <div>
+                    <p>Arroba Carrillo Omar Andrés - Interfaz de Separación de reciclaje de la comunidad.</p>                  
+                </div>
+                <div class="div_derechos">
+                    <p>2024 © Todos los derechos reservados</p>
+                    <p>Privacy Policy Terms and conditions</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

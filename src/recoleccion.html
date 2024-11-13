@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Planificación de Puntos">
+    <meta name="keywords" content="comunidad,reciclaje,grupo,UG">
+    <meta name="author" content="César Xavier Villacís Alvia">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Plataforma de Reciclaje - Planificación de Puntos</title>
+    <style>
+
+        #contenedor-principal {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 20px;
+            flex-wrap: wrap;
+            background-color: white;
+        }
+
+        #mapa {
+            flex: 2;
+            background-color: #217681;
+            padding: 15px;
+            border-radius: 10px;
+            color: white;
+        }
+
+        .punto-recoleccion {
+            display: inline-block;
+            background-color: #e7a006;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 8px;
+            width: 200px;
+            text-align: center;
+        }
+
+        #lista-puntos h2 {
+            text-align: center;
+        }
+
+        footer {
+            background-color: #6d9f71;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        .div_footer_header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        .div_logo_footer {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .div_redes > img {
+            width: 50px;
+            height: 50px;
+            padding: 10px;
+        }
+        .div_footer_main p {
+            padding: 20px;
+            gap: 20px;
+        }
+        .div_derechos {
+            display: flex;
+            background-color: #5b815e;
+            justify-content: space-between;
+            padding: 8px;
+            color: white;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div>
+        <img class="div_logo_header" src="https://pbs.twimg.com/media/GbtRafJW4BEozsZ?format=png&name=small" alt="logo">
+    </div>
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="quienesSomos.html">Funny Recycle</a></li>
+            <li><a href="recoleccion.html">Puntos de Recolección</a></li>
+            <li><a href="informeRecoleccion.html">Informe de Recolección</a></li>
+            <li><a href="separacion.html">Servicios</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="contenedor-principal">
+    <div id="mapa">
+        <h2>Mapa de Puntos de Recolección</h2>
+        <p>Visualiza los puntos de recolección disponibles en tu área.</p>
+        <img src="https://www.carmaxrentacar.com/images/mapa-turistico-guayaquil-ecuador.jpg" alt="Mapa de puntos de recolección" style="width:100%; border-radius: 10px;">
+    </div>
+    <div id="lista-puntos">
+        <h2>Puntos de Recolección</h2>
+        <div class="punto-recoleccion">
+            <h3>NORTE</h3>
+            <p>Ubicación: Mucho lote 1- Orquideas - Vergeles - Samanes</p>
+            <p>Materiales: Plásticos, Papel</p>
+            <p>Recolección: Lunes y jueves</p>
+            <p>Horario: 8:00 AM</p>
+        </div>
+        <div class="punto-recoleccion">
+            <h3>SUR</h3>
+            <p>Ubicación: Guasmo - Floresta - Domingo comin </p>
+            <p>Materiales: Vidrio, Metales</p>
+            <p>Recolección: Martes y Viernes</p>
+            <p>Horario: 8:00 AM</p>
+        </div>
+        <div class="punto-recoleccion">
+            <h3>ESTE</h3>
+            <p>Ubicación: Calle 29 - Batallon del suburbio - Mariscal Sucre</p>
+            <p>Materiales: Plásticos, Vidrio</p>
+            <p>Recolección: Miércoles y Sábado</p>
+            <p>Horario: 8:00 AM</p>
+        </div>
+        <div class="punto-recoleccion">
+            <h3>OESTE</h3>
+            <p>Ubicación: Sector Buenavista - Lago capeira - Las mercedes</p>
+            <p>Materiales: Plásticos, Metales</p>
+            <p>Recolección: Jueves y Domingo</p>
+            <p>Horario: 8:00 AM</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="div_footer_header">
+        <div class="div_logo_footer">
+            <img width="70" height="70" src="https://pbs.twimg.com/media/GbtRafJW4BEozsZ?format=png&name=small" alt="logo">
+            <p>Funny Recycle</p>
+        </div>
+        <div class="div_redes">
+            <img src="https://pbs.twimg.com/media/Gb0TPeuWIAU84Qb?format=png&name=small" alt="Facebook-logo">
+            <img src="https://pbs.twimg.com/media/Gb0TPbIXIAEadwv?format=png&name=small" alt="Instagram-logo">
+            <img src="https://pbs.twimg.com/media/Gb0TPewXQAg0Mr3?format=png&name=small" alt="x-Twitter-logo">
+        </div>
+    </div>
+    <hr>
+    <div class="div_footer_main">
+        <div>
+            <p>Cesar Xavier Villacis Alvia - Plataforma de Puntos de recolección</p>
+        </div>
+        <div class="div_derechos">
+            <p>2024 © Todos los derechos reservados</p>
+            <p>Privacy Policy Terms and conditions</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
