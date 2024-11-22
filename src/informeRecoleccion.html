@@ -79,6 +79,25 @@
         .boton-actualizar:hover {
             background-color: #388e3c;
         }
+
+        .boton-voluntario {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto; /* Centrado y espacio arriba y abajo */
+    padding: 15px;
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.boton-voluntario:hover {
+    background-color: #388e3c;
+}
     </style>
 </head>
 <body>
@@ -184,7 +203,9 @@
             <div class="progreso" style="width: 20%;"></div>
         </div>
         <button class="boton-actualizar" onclick="actualizarProgreso(this)">Actualizar progreso</button>
-
+    </div>
+        <button class="boton-voluntario" onclick="window.location.href='formInformeRecoleccion.html'">Sé parte de Funny Recicle como voluntario</button>
+    </div>
     </section>
 </div>
 
@@ -212,10 +233,7 @@
     </div>
 </footer>
 <script>
-/**
- * Actualiza el progreso de manera progresiva en incrementos de 10%.
- * @param {HTMLElement} boton - El botón que se presionó.
- */
+
  function actualizarProgreso(boton) {
     const seccion = boton.closest('.localizacion');
     const barraProgreso = seccion.querySelector('.progreso');
