@@ -64,6 +64,21 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        .boton-actualizar {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .boton-actualizar:hover {
+            background-color: #388e3c;
+        }
     </style>
 </head>
 <body>
@@ -105,6 +120,7 @@
         <div class="progreso-barra">
             <div class="progreso" style="width: 70%;"></div>
         </div>
+        <button class="boton-actualizar" onclick="actualizarProgreso(this)">Actualizar progreso</button>
     </section>
 
     <section class="localizacion">
@@ -124,6 +140,8 @@
         <div class="progreso-barra">
             <div class="progreso" style="width: 40%;"></div>
         </div>
+        <button class="boton-actualizar" onclick="actualizarProgreso(this)">Actualizar progreso</button>
+
     </section>
 
     <section class="localizacion">
@@ -138,11 +156,14 @@
             <div class="foto">
                 <img src="https://th.bing.com/th/id/OIP.Qk7UCjYhPSq3aD3qfC01uAAAAA?rs=1&pid=ImgDetMain" alt="Recolección Este">
             </div>
+
         </div>
         <h3>Progreso</h3>
         <div class="progreso-barra">
             <div class="progreso" style="width: 60%;"></div>
         </div>
+        <button class="boton-actualizar" onclick="actualizarProgreso(this)">Actualizar progreso</button>
+
     </section>
 
     <section class="localizacion">
@@ -162,6 +183,8 @@
         <div class="progreso-barra">
             <div class="progreso" style="width: 20%;"></div>
         </div>
+        <button class="boton-actualizar" onclick="actualizarProgreso(this)">Actualizar progreso</button>
+
     </section>
 </div>
 
@@ -188,6 +211,24 @@
         </div>
     </div>
 </footer>
+<script>
+/**
+ * Actualiza el progreso de manera progresiva en incrementos de 10%.
+ * @param {HTMLElement} boton - El botón que se presionó.
+ */
+ function actualizarProgreso(boton) {
+    const seccion = boton.closest('.localizacion');
+    const barraProgreso = seccion.querySelector('.progreso');
+    const progresoActual = parseInt(barraProgreso.style.width) || 0;
 
+    if (progresoActual < 100) {
+        const nuevoProgreso = progresoActual + 10;
+        barraProgreso.style.width = nuevoProgreso + '%';
+        alert(`El progreso ahora es del ${nuevoProgreso}%.`);
+    } else {
+        alert("El progreso ya está completo.");
+    }
+}
+</script>
 </body>
 </html>
