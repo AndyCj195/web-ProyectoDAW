@@ -8,8 +8,6 @@
     min-height: 100dvh;
     display: grid;
     grid-template-rows: auto 1fr auto;
-
-    
 }
 
 body{
@@ -30,12 +28,15 @@ header{
       width: 100px;
       height: 100px;
 }
-.menu {
-      display: flex;
-      gap: 50px;
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin: 0;
+    padding: 0;
 }
-.menu > li {
-    list-style-type: none;
+nav ul li {
+    display: inline;
 }
 .menu > li a{
     color: white;
@@ -46,6 +47,25 @@ header{
 .menu > li a:hover{
       color: blue;
 }
+
+#btnMenu{
+    display: none;
+    padding: 5px 15px;
+    background-color: #6d9f71;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.menuDesplegable{
+    display: none;
+    position:absolute;
+    top: 60px;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    padding: 10px;
+}
+
 
 
 footer{
@@ -87,18 +107,16 @@ footer{
     margin: 0 auto;
 }
 
-@media (max-width: 700px){
+@media (max-width: 775px){
+    nav ul{
+        display: none;
+    }
 
-    header{
-        gap: 10px;
-    }
-    .menu{
-        align-items:self-end;
-        flex-direction: column;
-        gap: 10px;
-    }
     .menu > a{
         padding: 5px 0px;
+    }
+    #btnMenu{
+        display: inline-block;
     }
 
     .div_redes > img{
