@@ -24,11 +24,51 @@
             margin: 10px;
             padding: 10px;
         }
+        .titulo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .seccion{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px;
+            width: 100%;
+        }
+        input.div-date {
+            width: 100%;
+        }
+        input.div-sector {
+            width: 100px;
+        }
+        input, select {
+            
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
         #botones-registros{
             display: flex;
             flex-direction: row;
             justify-content: center;
             margin: 10px;
+        }
+
+        #botones-registros button{
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #botones-registros button:hover{
+            background-color: #45a049;
         }
     </style>
 </head>
@@ -38,8 +78,7 @@
             <div>
                 <img class="div_logo_header" src="https://pbs.twimg.com/media/GbtRafJW4BEozsZ?format=png&name=small" alt="logo">
             </div>
-            <div>
-                
+            <div>        
                 <nav>
                     <button id="btnMenu">___<br>___<br>___</button>
                     <ul class="menu">
@@ -56,7 +95,6 @@
         <main>
             <div id="div-main">
                 <div class="espaciados">
-                    
                 </div>
                 <div class="espaciados">
                     <div id="formulario">
@@ -64,63 +102,75 @@
                             <h1>Registro de Usuario</h1>
                         </div>
                         <form id="form-registro-user" action="" onsubmit="return validarFormulario()">
-                            <div class="seccion">
-                                <label for="idNombres">Nombres:</label><br>
-                                <input type="text" id="idNombres" name="InputNoms"/>
+                            <div class="seccion">	
+                                <div class="div-nombre">
+                                    <label for="idNombres">Nombres:</label><br>
+                                    <input type="text" id="idNombres" name="InputNoms"/>
+                                </div>
+                                <div class="div-apellido">
+                                    <label for="idApellidos">Apellidos:</label><br>
+                                    <input type="text" id="idApellidos" name="inputApels"/>
+                                </div>
+                            </div>
+                            <div class="seccion">	
+                                <div class="div-CI">
+                                    <label for="idCI">Cedula de Identidad:</label><br>
+                                    <input type="text" id="idCI" name="inputCI"/>
+                                </div>
+                                <div class="div-date">
+                                    <label for="idDate">Fecha de Nacimiento:</label><br>
+                                    <input type="date" name="inputDate" id="idDate" min="6">
+                                </div>
                             </div>
                             <div class="seccion">
-                                <label for="idApellidos">Apellidos:</label><br>
-                                <input type="text" id="idApellidos" name="inputApels"/>
-                            </div>
-                            <div>
-                                <label for="idCI">Cedula de Identidad:</label><br>
-                                <input type="text" id="idCI" name="inputCI"/>
-                            </div>
-                            <div class="seccion">
-                                <label for="idDate">Fecha de Nacimiento:</label><br>
-                                <input type="date" name="inputDate" id="idDate" min="6">
-                            </div>
-                            <div class="seccion">
-                                <Label for="idCorreo">Correo:</Label><br>
-                                <input type="text" id="idCorreo" name="inputCorreo"/>
-                            </div>
-                            <div class="seccion">
-                                <Label for="idSector">Sector:</Label><br>
-                                <select name="Sectores" id="idSector">
-                                    <option value="">Seleccione...</option>
-                                    <option value="norte">Norte</option>
-                                    <option value="centro">Centro</option>
-                                    <option value="sur">Sur</option>
-                                    <option value="este">Este</option>
-                                    <option value="oeste">Oeste</option>
-                                </select>
+                                <div class="div-sector">
+                                    <Label for="idSector">Sector:</Label><br>
+                                    <select name="Sectores" id="idSector">
+                                        <option value="">Seleccione...</option>
+                                        <option value="norte">Norte</option>
+                                        <option value="centro">Centro</option>
+                                        <option value="sur">Sur</option>
+                                        <option value="este">Este</option>
+                                        <option value="oeste">Oeste</option>
+                                    </select>
+                                </div>
+                                <div class="div-address">
+                                    <Label for="idDireccion">Dirección:</Label><br>
+                                    <input type="text" id="idDireccion" name="inputDireccion">
+                                </div>
                             </div>
                             <div class="seccion">
-                                <label for="idCodP">Codigo Postal:</label><br>
-                                <input type="text" id="idCodP" name="inputCodP">
+                                <div class="div-CodP">
+                                    <label for="idCodP">Codigo Postal:</label><br>
+                                    <input type="text" id="idCodP" name="inputCodP">
+                                </div>
+                                <div class="div-cellphone">
+                                    <Label for="idTelefono">Teléfono:</Label><br>
+                                    <input type="text" id="idTelefono" name="inputTelefono">
+                                </div>
                             </div>
                             <div class="seccion">
-                                <Label for="idDireccion">Dirección:</Label><br>
-                                <input type="text" id="idDireccion" name="inputDireccion">
+                                <div class="div-genero">
+                                    <label for="">Seleccione su genero:</label><br>
+                                    <input type="radio" value="masculino" name="genero">
+                                    <label for="masculino">Masculino</label><br>
+                                    <input type="radio" value="femenino" name="genero">
+                                    <label for="femenino">Femenino</label>
+                                </div>
+                                <div class="div-correo">
+                                    <Label for="idCorreo">Correo:</Label><br>
+                                    <input type="text" id="idCorreo" name="inputCorreo"/>
+                                </div>
                             </div>
                             <div class="seccion">
-                                <Label for="idTelefono">Teléfono:</Label><br>
-                                <input type="text" id="idTelefono" name="inputTelefono">
-                            </div>
-                            <div class="seccion">
-                                <label for="">Seleccione su genero:</label><br>
-                                <input type="radio" value="masculino" name="genero">
-                                <label for="masculino">Masculino</label><br>
-                                <input type="radio" value="femenino" name="genero">
-                                <label for="femenino">Femenino</label>
-                            </div>
-                            <div class="seccion">
-                                <label for="idContrasena">Contraseña:</label><br>
-                                <input type="password" id="idContrasena" name="inputContrasena">
-                            </div>
-                            <div class="seccion">
-                                <label for="idContrasena2">Confirmar Contraseña:</label><br>
-                                <input type="password" id="idContrasena2" name="inputContrasena2">
+                                <div class="div-contra">
+                                    <label for="idContrasena">Contraseña:</label><br>
+                                    <input type="password" id="idContrasena" name="inputContrasena">
+                                </div>
+                                <div class="div-contra2">
+                                    <label for="idContrasena2">Confirmar Contraseña:</label><br>
+                                    <input type="password" id="idContrasena2" name="inputContrasena2">
+                                </div>
                             </div>
                             <div id="botones-registros">
                                 <button type="submit">Registrar</button>
