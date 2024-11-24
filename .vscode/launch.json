@@ -1,10 +1,16 @@
 {
     "configurations": [
         {
-            "type": "chrome",
-            "name": "http://127.0.0.1:3000/src/Formulario_QuienesSomos.html",
+            "type": "msedge",
+            "name": "http://127.0.0.1:3000/src/formRegistroUser.html",
             "request": "launch",
-            "url": "http://127.0.0.1:3000/src/Formulario_QuienesSomos.html"
+            "url": "http://127.0.0.1:3000/src/formRegistroUser.html"
+        },
+        {
+            "type": "msedge",
+            "name": "http://127.0.0.1:3000/src/recoleccion.html",
+            "request": "launch",
+            "url": "http://127.0.0.1:3000/src/recoleccion.html"
         }
     ]
 }

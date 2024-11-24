@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <title>Separacion de reciclaje</title>
     <style>
+        /*Interna*/
         #principal{
             width: 90%;
             margin: auto;
@@ -29,10 +30,10 @@
         }
 
         .linea{
-            background-color: #7eb983;
+            background-color: #6d9f71;
             width: 88%;
             height: 3px;
-            margin: 20px auto;
+            text-align: center;
         }
 
 
@@ -64,6 +65,19 @@
             text-align: center;
         }
 
+        ul{
+            padding-inline-start: 40px;
+        }
+
+        /* #seccion-inicio{
+            background-image: url("https://www.leonardo-gr.com/wp-content/uploads/2022/05/residuo.jpg");
+            text-align: center;
+            max-width: 70%;
+            max-height: 50%;
+        } */
+
+
+        /*relacionado a seccion uno - objetos de reciclaje*/
         .obj img{
             max-width: 100%;
             height: 230px;         
@@ -81,7 +95,7 @@
             /*max-width: auto;*/
             margin-left: 5px;
             margin-top: 5px;
-            background-color: #E8F5E9;    
+            background-color: white;    
         }
 
         #separacion-obj{
@@ -119,8 +133,9 @@
             grid-column: 3;
         }
 
-         /*relaciuonado a la seccion dos - procesos*/
-         #separacion{
+
+        /*relaciuonado a la seccion dos - procesos*/
+        #separacion{
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
@@ -134,7 +149,7 @@
         }
 
         .separa-proc{
-            width: 23%;
+            max-width: 23%;
             padding: 10px;
             margin: 5px; /*para que no se salga del contenedor*/
             border: 1px solid;
@@ -156,105 +171,92 @@
 
 
         /*realacionado a la seccion-third*/
-
-        
         #resultado-prod{
             text-align: center;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
         }
 
-        .prod-recicl{
+        .prod-recicl {
             padding: 10px;
-            width: 30%;
+            min-width: auto;
+            margin-left: 50px;
             margin-top: 15px;
             margin-bottom: 30px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            width: 200px;
+            display: inline-block;
             text-align: center;
         }
 
         .prod-recicl img {
-            width: 100%; 
+            width: 80%; 
             height: 360px; 
-            object-fit: cover; 
+            /*object-fit: cover;*/ 
         }
 
         .prod-recicl figcaption{
-            background-color: #E8F5E9;
-            width: 100%;
-            margin-top: 10px;
+            background-color: white;
+            width: 80%;
+            margin: auto;
         }
 
-        .prod-recicl:nth-child(3) {
-            width: 50%;
-            grid-column: span 2;
-            justify-self: center;
+        .prod-recicl:nth-child(1){
+            width: 40%;
         }
 
-        @media (max-width: 575px){
-            /*Seccion dos*/
-            #separacion{
-                display: grid;
-                grid-template-columns: 1fr;
-                justify-items: center;
-            }
+        .prod-recicl:nth-child(2){
+            width: 40%;
+        }
 
-            .separa-proc{
-                width: 80%;
-                padding: 10px;
-                margin: 5px; /*para que no se salga del contenedor*/
-                border: 1px solid;
-                box-sizing: border-box;
-            }
-            /*Seccion tres*/
-            #resultado-prod{
-                display: grid;
-                grid-template-columns: 1fr;
-                justify-items: center;
-            }
-            .prod-recicl{
-                border: #6d9f71;
-            }
-            .prod-recicl:nth-child(1){
-                width: 90%;
-            } 
-            .prod-recicl:nth-child(2){
-                width: 90%;
-            }
-            .prod-recicl:nth-child(3){
-                width: 90%;
-                grid-column: span 1;
-                justify-self: center;
-            }
+        .prod-recicl:nth-child(3){
+            width: 40%;
+        }
+        
 
+
+        #BotonForm{
+            text-align: center;
+            margin: auto;
+            width: 70%;
+            padding: 20px;
+        }
+
+        #BotonForm button{
+            font-size: 100%;
         }
     </style>
 </head>
+
+
 <body>
-    <div id="id_container">
-        <header>
-            <div>
-                <img class="div_logo_header" src="https://pbs.twimg.com/media/GbtRafJW4BEozsZ?format=png&name=small" alt="logo">
+    <header>
+        <div class="header-logo">
+            <img class="div_logo_header" src="https://pbs.twimg.com/media/GbtRafJW4BEozsZ?format=png&name=small" alt="logo">
+        </div>
+        <div class="header-botones">
+            <div id="botones-registro">
+                <button onclick="window.location.href='formRegistroUser.html'">Registrar</button>
+                <button>Iniciar Sesion</button>
             </div>
-            <nav>
-                <ul class="menu">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="quienesSomos.html">Funny Recycle</a></li>
-                    <li><a href="recoleccion.html">Puntos de Recolección</a></li>
-                    <li><a href="informeRecoleccion.html">Informe de Recolección</a></li>
-                    <li><a href="separacion.html">Servicios</a></li>
-                </ul>
-            </nav>
-        </header>
+            <div id="botones-pagina">
+                <nav>
+                    <button id="btnMenu">___<br>___<br>___</button>
+                    <ul class="menu">
+                        <li><a id="inicio" href="index.html" class="tit">Inicio</a></li>
+                        <li><a id="quienes-somos" href="quienesSomos.html" class="tit">Funny Recycle</a></li>
+                        <li><a id="point-recoleccion" href="recoleccion.html" class="tit">Puntos de Recolección</a></li>
+                        <li><a id="informe" href="informeRecoleccion.html" class="tit">Informe de Recolección</a></li>
+                        <li><a id="servicio" href="separacion.html" class="tit">Servicios</a></li>
+                    </ul>
+                    <ul class="menuDesplegable"></ul>
+                </nav>
+            </div>
+        </div>
+        
+    </header>
         <main>
-            <div style="width: 90%; margin: 25px auto; display: grid; ">
-                <hr>
+            <div style="width: 70%; margin: 25px auto;">
+                <hr style="width: 90%; margin: 0 auto;">
                 <h2>Separación de reciclaje de la comunidad</h2>
-                <hr>
+                <hr style="width: 90%; margin: 0 auto;">
             </div>
             <div id="principal">
                 <div id="seccion-inicio">
@@ -266,7 +268,8 @@
                         promoviendo un futuro más sostenible.
                     </p>
                 </div>
-                <div class="linea"></div>
+                <div class="linea" style="width: 80%; margin: 25px auto;"></div>
+
                 <section id="seccion-one">
                     <div id="separacion-obj">
                         <div class="obj">
@@ -320,12 +323,13 @@
                         </div>
                     </div>
                 </section>
-                <div class="linea"></div>
+                <div class="linea" style="width: 80%; margin: 25px auto;"></div>
+
                 <section id="seccion-second">
-                    <div style="width: 90%; margin: 25px auto; display: grid;" >
-                        <hr>
+                    <div style="width: 70%; margin: 25px auto;" >
+                        <hr style="width: 90%; margin: 0 auto;">
                         <h2>Métodos de separación de materiales de reciclaje</h2>
-                        <hr>
+                        <hr style="width: 90%; margin: 0 auto;">
                     </div>
                     <div id="separacion">
                         <div class="separa-proc">
@@ -373,12 +377,13 @@
                         </div>
                     </div>          
                 </section>
-                <div class="linea"></div>
+                <div class="linea" style="width: 80%; margin: 25px auto;"></div>
+                
                 <section id="seccion-third">
-                    <div style="width: 90%; margin: 25px auto; display: grid; ">
-                        <hr>
+                    <div style="width: 70%; margin: 25px auto;">
+                        <hr style="width: 90%; margin: 0 auto;">
                         <h2>Objetos hechos a partir de materiales reciclados</h2>
-                        <hr>
+                        <hr style="width: 90%; margin: 0 auto;">
                     </div>
                     <div id="resultado-prod">
                         <figure class="prod-recicl">
@@ -396,6 +401,15 @@
                     </div>
                 </section>
             </div>
+
+
+            <div id="BotonForm">
+                <a href="FormSeparacion.html" target="_blank" style="text-decoration: none;">
+                    <button type="button">Ir al formulario</button>
+                </a>
+            </div>
+
+            <script src="/scriptjs/scriptsepara.js"></script>
         </main>
         <footer>
             <div class="div_footer_header">
@@ -421,6 +435,53 @@
                 </div>
             </div>
         </footer>
-    </div>
+        <script type="text/javascript" src="/js/validacionHeaderFooter.js"></script>
+        <script>
+            //Para los elementos img de seccion-one
+            let imgs = document.querySelectorAll("#seccion-one img");
+
+            imgs.forEach((img) => {
+                img.addEventListener("mouseover", agrandarImagen);
+                img.addEventListener("mouseout", resetearImagen);
+            });
+            function agrandarImagen(evento) {
+                evento.target.style.transform = "scale(1.2)";
+                evento.target.style.transition = "transform 0.7s ease";
+            }
+            function resetearImagen(evento) {
+                evento.target.style.transform = "scale(1)";
+            }
+
+
+            //Para los elementos img de resultado-prod
+            let imgs2 = document.querySelectorAll("#resultado-prod img");
+
+            imgs2.forEach((img) => {
+                img.addEventListener("mouseover", agrandarImagen2);
+                img.addEventListener("mouseout", resetearImagen2);
+            });
+            function agrandarImagen2(evento) {
+                evento.target.style.transform = "scale(1.2)";
+                evento.target.style.transition = "transform 1.5s ease";
+            }
+            function resetearImagen2(evento) {
+                evento.target.style.transform = "scale(1)";
+            }
+
+
+
+            //Para los elementos h4 de "separa-proc"
+            const headers = document.querySelectorAll('.separa-proc h4');
+
+            headers.forEach(header => {
+            header.addEventListener('click', () => {
+                const paragraph = header.nextElementSibling;
+
+                paragraph.style.display = paragraph.style.display === 'none' ? 'block' : 'none';
+            });
+
+            header.style.cursor = 'pointer';
+            });
+        </script>
 </body>
 </html>
