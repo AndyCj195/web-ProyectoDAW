@@ -14,7 +14,7 @@
                 padding: 0;
                 box-sizing: border-box;
             }
-
+            
             main{
                 margin: 0;
                 width: 100%;
@@ -24,7 +24,7 @@
             .contenedor_principal{
                 position: relative;
                 max-width: 600px;
-                margin: 30px;
+                margin: auto;
                 box-shadow: 0 4px 8px rgba(0,0,0,0.3);
                 overflow: hidden;
                 border: 10px;
@@ -58,22 +58,23 @@
             .quienes_somos{
                 text-align: center;
                 width: 100%;
-                height: 25vh;
+                height: 22vh;
             }
             .proposito{
                 text-align: center;
                 width: 100%;
-                height: 20vh;
-                background-color: rgb(165, 233, 98);            
+                height: 22vh;
+                background-color: rgb(165, 233, 98);       
             }
-
+            
             #bloque_texto h1 {
                 font-size: 30px;
                 font-family:'Times New Roman', Times, serif;
-                margin: 0 0 10px;
+                margin: 30px;
                 text-transform: uppercase;
                 text-align: center;
                 display: inline-flex ;
+
             }
 
             #bloque_texto p{
@@ -85,12 +86,22 @@
                 display: flex;
             }
             #pilares .contenedor-cajas{
-                margin: 20px;
+                padding: 30px;
+                margin: auto;
                 display: flex;
-                gap: 20px;
+                gap: 50px;
                 flex-wrap: wrap;
                 justify-content: center;
             }
+            .titulo_pilares {
+
+                font-family:'Times New Roman', Times, serif;
+                font-size: 30px;
+                text-transform: uppercase;
+                text-align: center;
+                padding: 15px;
+            }
+
             .caja {
                 width: 250px;
                 padding: 20px;
@@ -113,12 +124,107 @@
             }
             .caja:hover {
                 box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            }     
+            }
+            /*---------- Ejes de accion -----------*/
+            .contenedor_accion{
+                text-align: center;
+                padding: 20px;
+            }
+            .titulo_accion {
+                background-color: #6FBF73;
+                font-family:'Times New Roman', Times, serif;
+                font-size: 30px;
+                text-transform: uppercase;
+                text-align: center;
+                color: rgb(0, 0, 0);
+                padding: 15px;
+                border-radius: 5px 5px 0 0;
+            }
+            .sections {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                background-color: rgb(255, 255, 255);
+                padding: 20px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            .eje {
+                margin: 20px;
+                text-align: center;
+                display: block;
+                min-width: 250px; 
+                max-width: 400px; 
+                border-radius: 10px; 
+                box-sizing: border-box;
+                background-color: rgb(209, 245, 245);
+                margin-bottom: 20px;
+                padding: 10px;
+                border: 1px solid #ccc;
+                cursor: pointer;
+
+            }
+
+            .eje h2 {
+                font-family:'Times New Roman', Times, serif;
+                background-color: #00AEB2; 
+                color: #000; 
+                padding: 15px;
+                border-radius: 10px; 
+                text-align: center;
+                font-weight: bold;
+                font-size: 1.2rem;
+                margin: 0; 
+                text-transform: uppercase;
+            }
+
+            .eje ul {
+                padding: 0;
+                border-radius: 10px; 
+                text-align: center;
+                font-size: 1.2rem;
+                margin: 15px 30px; 
+                font-family: 'Arial', sans-serif;
+                display: none;  /* Inicialmente oculto */
+                padding-left: 20px;
+                list-style-type: disc;
+            }
+
+            .eje.expandido ul {
+                display: block;  /* Mostrar el contenido cuando está expandido */
+            }
+            
+            .eje ul li {
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                text-align: left;
+                margin: 5px 0;
+                padding: 2px;
+            }
+
+            /*---------------Botón del Formulario----------------*/
+            #boton{
+                text-align: center;
+                margin: 15px;
+                padding: 15px;
+            }
+            .boton_formulario{
+                font-family:'Times New Roman', Times, serif;
+                font-weight: bold;
+                padding: 15px 30px;
+                font-size: 20px;
+                color: #000000;
+                background-color: #96ff0dbe; 
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s, transform 0.2s;
+            }
+            .boton_formulario:hover {
+            background-color: #e1fa00;
+            transform: scale(1.05); 
+            }
         </style>
     </head>
-
     <body>
-
         <header>
             <div>
                 <img class="div_logo_header" src="https://pbs.twimg.com/media/GbtRafJW4BEozsZ?format=png&name=small" alt="logo">
@@ -143,7 +249,6 @@
                     </div>
                 </div>
             </div>
-            <br>
             <div id="bloque_texto">
                 <section class="quienes_somos">
                     <h1> Quienes Somos</h1>
@@ -153,7 +258,6 @@
                     </p>
                 </section>
                 <section class="proposito">
-                    <br>
                     <h1>Proposito</h1>
                     <p> Reducir el impacto ambiental y crear conciencia en las comunidades sobre la importancia del reciclaje y asi promoviendo una
                      cultura de sostenibilidad a través de una plataforma facil de usar.
@@ -161,6 +265,7 @@
                 </section>
             </div>
             <div id="pilares">
+                <h1 class="titulo_pilares">Valores</h1>
                 <div class="contenedor-cajas">
                     <div class="caja">
                         <h3>Sostenibilidad</h3><br>
@@ -174,6 +279,43 @@
                         <h3>Innovación</h3><br>
                         <img src="https://laserenaonline.cl/wp-content/uploads/2021/05/reciclaje-19052021.jpg" alt="Imagen 3">
                     </div>
+                </div>
+            </div>
+            <div id="accion">
+                <div class="contenedor_accion">
+                    <h1 class="titulo_accion"> Ejes de Acción </h1>
+                    <div class="sections">
+                        <div class="eje">
+                            <h2>Cultura y educación</h2>
+                            <ul>
+                                <li>Programas de educación</li>
+                                <li>Apoyo a programas de disposición responsable</li>
+                                <li>Comunidad digital</li>
+                            </ul>
+                        </div>
+                        <div class="eje">
+                            <h2>Manejo de residuos</h2>
+                            <ul>
+                                <li>Programas de separación, recolección, procesamiento y disposición final</li>
+                                <li>Gestión integral para empresas</li>
+                                <li>Sistematización y caracterización de materiales</li>
+                            </ul>
+                        </div>
+                        <div class="eje">
+                            <h2>Innovación</h2>
+                            <ul>
+                                <li>Estándares de sostenibilidad ambiental y social para proveedores</li>
+                                <li>Uso de empaques, recipientes y embalajes con materiales alternativos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="boton">
+                <div class="contenedor_boton">
+                    <button class="boton_formulario" onclick="window.location.href='Formulario_QuienesSomos.html'">
+                        Formulario
+                    </button>
                 </div>
             </div>
         </main>
@@ -200,7 +342,42 @@
                     <p>Privacy Policy Terms and conditions</p>
                 </div>
             </div>
-           
         </footer>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const boton_formulario = document.getElementById('boton_formulario');
+                function cambioColor() {
+                    const letras = '0123456789ABCDEF';
+                    let color = '#';
+                    for (let i = 0; i < 6; i++) {
+                        color += letras[Math.floor(Math.random() * 16)];
+                    }
+                    return color;
+                }
+                
+                // Evento para cambiar el color de fondo al hacer clic en el botón
+                
+                if (boton_formulario) {
+                    boton_formulario.addEventListener('click', () => {
+                        document.body.style.backgroundColor = cambioColor();
+                    });
+                } 
+
+                // ejes de accion comportamiento interactivo
+                const ejes = document.querySelectorAll('.eje');  // Selecciona todos los ejes
+                ejes.forEach(eje => {
+                    eje.addEventListener('click', () => {
+                        // Verifica si el eje ya está expandido
+                        if (eje.classList.contains('expandido')) {
+                            // Si está expandido, lo colapsa
+                            eje.classList.remove('expandido');
+                        } else {
+                            // Si no está expandido, lo expande
+                            eje.classList.add('expandido');
+                        }
+                    });
+                });
+            });           
+        </script>
     </body>
 </html>
