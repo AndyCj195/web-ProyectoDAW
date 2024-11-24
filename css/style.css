@@ -146,15 +146,16 @@ footer{
 }
 
 @media (max-width: 775px){
-    nav ul{
-        display: none;
+    header{
+        gap: 10px;
     }
-
+    .menu{
+        align-items:self-end;
+        flex-direction: column;
+        gap: 10px;
+    }
     .menu > a{
         padding: 5px 0px;
-    }
-    #btnMenu{
-        display: inline-block;
     }
 
     .div_redes > img{
@@ -162,5 +163,6 @@ footer{
         height: 30px;
         padding: 5px;
     }
+}
 }
 
