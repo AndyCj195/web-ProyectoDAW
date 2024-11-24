@@ -24,10 +24,48 @@ header{
 }
 
 
-.div_logo_header{
+.header-logo img{
       width: 100px;
       height: 100px;
 }
+#botones-registro{
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+    margin-bottom: 20px;
+}
+#botones-registro button{
+    padding: 10px 20px;
+    background-color: #6d9f71;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#botones-registro button:nth-child(1){
+    margin-right: 20px;
+    text-decoration: underline;
+}
+#botones-registro button:nth-child(2){
+    color: #6d9f71;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    
+}
+
+#botones-registro button:hover:nth-child(1){
+    background-color: #5b815e;
+    border: 1px solid #5b815e;
+    color: #e4e4e4;
+}
+#botones-registro button:hover:nth-child(2){
+    background-color: #e6e6e6;
+    border: 1px solid #e6e6e6;
+    color: #6d9f71;
+}
+
 nav ul {
     list-style: none;
     display: flex;

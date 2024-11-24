@@ -166,20 +166,29 @@
 <body>
     <div id="id_container">
         <header>
-            <div>
+            <div class="header-logo">
                 <img class="div_logo_header" src="https://pbs.twimg.com/media/GbtRafJW4BEozsZ?format=png&name=small" alt="logo">
             </div>
-            <nav>
-                <button id="btnMenu">___<br>___<br>___</button>
-                <ul class="menu">
-                    <li><a id="inicio" href="index.html" class="tit">Inicio</a></li>
-                    <li><a id="quienes-somos" href="quienesSomos.html" class="tit">Funny Recycle</a></li>
-                    <li><a id="point-recoleccion" href="recoleccion.html" class="tit">Puntos de Recolección</a></li>
-                    <li><a id="informe" href="informeRecoleccion.html" class="tit">Informe de Recolección</a></li>
-                    <li><a id="servicio" href="separacion.html" class="tit">Servicios</a></li>
-                </ul>
-                <ul class="menuDesplegable"></ul>
-            </nav>
+            <div class="header-botones">
+                <div id="botones-registro">
+                    <button onclick="window.location.href='formRegistroUser.html'">Registrar</button>
+                    <button>Iniciar Sesion</button>
+                </div>
+                <div id="botones-pagina">
+                    <nav>
+                        <button id="btnMenu">___<br>___<br>___</button>
+                        <ul class="menu">
+                            <li><a id="inicio" href="index.html" class="tit">Inicio</a></li>
+                            <li><a id="quienes-somos" href="quienesSomos.html" class="tit">Funny Recycle</a></li>
+                            <li><a id="point-recoleccion" href="recoleccion.html" class="tit">Puntos de Recolección</a></li>
+                            <li><a id="informe" href="informeRecoleccion.html" class="tit">Informe de Recolección</a></li>
+                            <li><a id="servicio" href="separacion.html" class="tit">Servicios</a></li>
+                        </ul>
+                        <ul class="menuDesplegable"></ul>
+                    </nav>
+                </div>
+            </div>
+            
         </header>
         <main>
             <div id="id_div_video">
@@ -227,7 +236,7 @@
                 <p>En Funny Recycle, cada pequeño esfuerzo cuenta.¡Recicla hoy para un mañana más brillante y divertido!</p>
                 <p>Unete a Funny Recycle y sé parte del cambio positivo!</p>
             </div>
-            <script type="text/javascript" src="/js/validacion.js"></script>
+            <script type="text/javascript" src="/js/validacionHeaderFooter.js"></script>
         </main>
         <footer>
                 <div class="div_footer_header">
